@@ -1,5 +1,3 @@
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
-
 <br />
 <div align="center">
     <a href="https://fabiorangel.com.br/"> <img src="https://fabiorangel.com.br/public/img/logo_novo.png" alt="Logo" width="200" > <br>   Site do Desenvolvedor</a>
@@ -20,13 +18,14 @@ abrangendo tanto o back-end quanto o front-end.
 * Aplicação  desenvolvida em PHP Puro e Laravel
   
 Métodos:
-* CRUD (criar, editar, ler e deletar), 
+* CRUD (criar, editar, ler e deletar), com metodos POST/GET com apontamento para os Enpoints
+* FRONT Desenlvovido em Javascript OOP e utilizando Canvas para interação
 
 <br />
 
 <p>Acesso a demonstração do Sistema</p><br />
 
-* API 
+* API e ENDPOINTS
 <a href="https://documenter.getpostman.com/view/25727843/2sA2r545M2">Doumentação POSTMAN</a><br />
 
 * API PHP PURO  =>  public/apiPhp/ <br />
