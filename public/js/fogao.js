@@ -1,7 +1,7 @@
  /**
  Fabio Henrique Rangel
  fabioh.rangel@gmail.com
- Não foram adcionados tratamentos de erro   
+ Não foram incluidos tratamentos de erro   
 */
 var canvas = document.getElementById('stoveCanvas');
 var ctx = canvas.getContext('2d');

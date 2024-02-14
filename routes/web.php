@@ -6,7 +6,6 @@ use App\Http\Controllers\usersController;
 
 
 ////////Produtos
-Route::get('dashboard', [usersController::class, 'dashboard']);
 Route::get('listUsers',  [dataTableController::class, 'users'])->name('users.datatables');
 Route::POST('modalCadUsers',  [usersController::class, 'modalCadUsers']);
 Route::POST('modalEditUsers',  [usersController::class, 'modalEditUsers']);

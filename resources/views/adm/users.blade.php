@@ -221,9 +221,9 @@
 <script>
 jQuery("i").on('click', "#btn_cad", function() {
     var id = jQuery(this).attr('data-id'); // pega o id do botão
-    jQuery.post('https://fabiorangel.com.br/api_users/modalCadUsers', {
+    jQuery.post('{{ url("modalCadUsers")}}', {
         acao: 'alterar',
-        _token: '{{ csrf_token() }}',
+        
         id: id
     }, function(retorno) {
         jQuery("#modalCad").modal({
@@ -254,7 +254,7 @@ jQuery("i").on('click', "#btn_cad", function() {
 <script>
 jQuery("table").on('click', "#btnEdit", function() {
     var id = jQuery(this).attr('data-id'); // pega o id do botão
-    jQuery.post('https://fabiorangel.com.br/api_users/modalEditUsers', {
+    jQuery.post('{{ url("modalEditUsers")}}', {
         acao: 'alterar',
         _token: '{{ csrf_token() }}',
         id: id

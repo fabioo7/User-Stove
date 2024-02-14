@@ -40,11 +40,19 @@
 											</div>
 										</div>
 									</div>
-									<a class="dropdown-item" href="https://romospantaleao.com.br/edit_user/ }}"><i class="bx bx-user-circle"></i>Profile</a>
+									<a class="dropdown-item" href=""><i class="bx bx-user-circle"></i>Profile</a>
 						
 									
 		   @guest
-           
+          
+		   <a class="dropdown-item" href="{{ route('logout') }}"onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+		   <i class="bx bx-log-out"></i>  Logout
+                          </a>
+
+		     <form id="logout-form" action="{{ route('logout') }}" method="POST" >
+		     {{ csrf_field() }}
+		     </form>
+			
             
 		   @else
 			 

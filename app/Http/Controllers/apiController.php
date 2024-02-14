@@ -33,13 +33,15 @@ class apiController extends Controller
     {
 
         $origin  = $request->input('origin');
+        $password = bcrypt('102030');
 
         $insertUser = User::create([
             'name' => $request->input('name'),
             'email' => $request->input('email'),
             'address' => $request->input('address'),
             'state' => $request->input('state'),
-            'city' => $request->input('city')
+            'city' => $request->input('city'),
+            'password' => $password
         ]);
 
         if ($insertUser) {
@@ -55,13 +57,16 @@ class apiController extends Controller
     public function updateUsers(Request $request) //atualiza
     {
         $origin  = $request->input('origin');
+        
+
 
         $updateUser = User::where('id', '=', $request->input('id'))->update([
             'name' => $request->input('name'),
             'email' => $request->input('email'),
             'address' => $request->input('address'),
             'state' => $request->input('state'),
-            'city' => $request->input('city')
+            'city' => $request->input('city'),
+            
         ]);
 
         if ($updateUser) {

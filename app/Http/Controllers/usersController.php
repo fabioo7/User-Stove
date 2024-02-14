@@ -9,10 +9,8 @@ use Illuminate\Support\Facades\Crypt;
 use Illuminate\Contracts\Encryption\DecryptException;
 use Illuminate\Http\Request;
 use DataTables;
-use App\Models\products;
-use App\Models\Brands;
 use Redirect;
-
+use Helper;
 class usersController extends Controller
 {
     
@@ -28,26 +26,34 @@ public function __construct()
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
   
-    public function dashboard() // Pagina de nivel de caixa dagua
-    {   
-        return view('adm.principal');
-    }
-  
+
 
     public function modalCadUsers(Request $request) 
     {
-        $brand = DB::table('brands')->get();
-        return view('adm.modal.modalCadUsers')->with('brand', $brand);
+        $city = DB::table('city')
+        ->join('state', 'city.state_id', '=', 'state.id')
+        ->select('city.*', 'city.name as city_name','state.name AS state_name')
+        ->get();        
+        return view('adm.modal.modalCadUsers')
+        ->with('city', $city);
     }
 
     public function modalEditUsers(Request $request) 
     {
       //  $brand = DB::table('brands')->get();
         $id = $request->input('id');
+
+        $city = DB::table('city')
+        ->join('state', 'city.state_id', '=', 'state.id')
+        ->select('city.*', 'city.name as city_name','state.name AS state_name')
+        ->get();
+
         $url="https://fabiorangel.com.br/api_users/api/checkUsers/$id";
         $output=file_get_contents($url);
         $user=json_decode($output);
-        return view('adm.modal.modalEditUsers')->with('user', $user);
+        return view('adm.modal.modalEditUsers')->with('user', $user)
+        ->with('city', $city);
+        ;
     }
 
 

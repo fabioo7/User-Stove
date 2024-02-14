@@ -15,7 +15,8 @@ class City extends Migration
     {
         Schema::create('city', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('city_id')->nullable();
+            $table->integer('state_id')->nullable();
+            $table->string('name' ,80)->nullable();
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent();
         });

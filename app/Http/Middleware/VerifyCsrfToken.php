@@ -14,6 +14,8 @@ class VerifyCsrfToken extends Middleware
     protected $except = [  
         'tabela_clientes',
         'insertProdutos',
+        'modalCadUsers',
+        'modalEditUsers'
         //
     ];
 }
