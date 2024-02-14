@@ -16,18 +16,22 @@ O teste técnico consiste em desenvolver API e aplicação do fogão,
 abrangendo tanto o back-end quanto o front-end.
 
 * API com os seguintes dados (usuário, endereço, cidade, estado).
+* Elaboração de um fogão baseando-se em OOP
 * Aplicação  desenvolvida em PHP Puro e Laravel
-* versão em Laravel 8
-* Banco MySql
-
+  
 Métodos:
-* CRUD (criar, editar, ler e deletar), de usuário com endereço
-* Endereços , estados e cidades com ids relecionados 
+* CRUD (criar, editar, ler e deletar), 
+
 <br />
 
 <p>Acesso a demonstração do Sistema</p><br />
-* API
+
+* API 
 <a href="https://documenter.getpostman.com/view/25727843/2sA2r545M2">Doumentação POSTMAN</a><br />
+
+* API PHP PURO  =>  public/apiPhp/ <br />
+<a href="https://fabiorangel.com.br/api_users/public/apiPhp/apiListUsers.php">https://fabiorangel.com.br/api_users/public/apiPhp/apiListUsers.php</a><br />
+
 * CRUD
 <a href="https://fabiorangel.com.br/api_users/listUsers">https://fabiorangel.com.br/api_users/listUsers</a><br />
 Login: teste@teste.com  senha: 102030 <br />
@@ -36,12 +40,14 @@ Login: teste@teste.com  senha: 102030 <br />
 <a href="https://fabiorangel.com.br/api_users/public/fogao.php">https://fabiorangel.com.br/api_users/public/fogao.php</a><br />
 
 
+
 ## :computer: Técnologia
 - Laravel 8.83
 - Utilizado PHP 7.0
 - Mysql
 - javascript
 - Ajax
+- Bootstrap
 
 
 ## 🗒️ Ferramentas
